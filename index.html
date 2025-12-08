@@ -2,34 +2,44 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <title>Gestione Soci - Avvio</title>
+  <title>Gestione Soci - App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <script>
-    // Redirect SICURO compatibile Android
-    window.onload = function () {
-      window.location.replace("https://script.google.com/macros/s/AKfycbxb-3mpvLq6Z99jExoJaXtM81pqLUFpyBjjVF9qSG_DjogTY7VesEvgZGUbWZtMOleohg/exec");
-    };
-  </script>
-
   <style>
-    body {
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
       background: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
+      overflow: hidden;
+      color: white;
+      font-family: Arial;
     }
-    .msg {
-      font-size: 1.2rem;
-      opacity: 0.8;
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+    .loading {
+      position: absolute;
+      font-size: 1.4rem;
+      opacity: 0.7;
     }
   </style>
 </head>
 <body>
-  <div class="msg">Apertura Gestione Soci...</div>
+
+  <div class="loading">Apertura Gestione Soci…</div>
+
+  <iframe 
+    src="https://script.google.com/macros/s/AKfycbxb-3mpvLq6Z99jExoJaXtM81pqLUFpyBjjVF9qSG_DjogTY7VesEvgZGUbWZtMOleohg/exec"
+    onload="document.querySelector('.loading').style.display='none';">
+  </iframe>
+
 </body>
 </html>
+
+
